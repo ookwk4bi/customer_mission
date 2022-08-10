@@ -1,0 +1,36 @@
+<%= form_tag import_documents_path, multipart: true do %>
+    <%= file_field_tag :file, class: "btn btn-default pull-right btn-distance" %>
+    <%= submit_tag "インポート", class: "btn btn-default pull-right btn-css" %> 
+    <%= link_to '戻る', customers_path, class: "btn btn-default pull-right btn-a" %>
+    <%= link_to "全て削除", destroy_all_documents_path , method: :delete, class: "btn btn-default pull-right btn-b"%>
+  <% end %>
+  
+  
+  <h1 class="font-size">CSV情報一覧</h1>
+  <br>
+  <br>
+  <table class="table table-striped">
+  
+      <thead>
+        <th>姓</th>
+        <th>名</th>
+        <th>詳細</th>
+        <th>会員番号</th>
+        
+      </thead>
+      <tbody>
+        <% @documents.each do |document| %>
+          <tr>
+            <td><%= document.last_name.truncate(5) %></td>
+            <td><%= document.personal_name.truncate(5) %></td>
+            <td><%= document.content.truncate(50) %></td>
+            <td><%= document.number.truncate(9) %></td>
+            
+          </tr>
+        <% end %>
+        
+      </tbody>
+    </table>
+    <div class="a">
+      <%= paginate @documents %>
+    </div>
