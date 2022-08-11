@@ -8,6 +8,8 @@
       <dd style="margin:0px 0px 10px 20px"><%= @customer.detail %></dd>
       <dt>会員番号</dt>
       <dd style="margin:0px 0px 10px 20px"><%= @customer.account_number %></dd>
+      <dt>タイプ</dt>
+      <dd style="margin:0px 0px 10px 20px"><%= @customer.type.name %></dd>
     </dl>
 <br>
     <h2 class="font-size"><対応注意度></h2>
@@ -17,7 +19,7 @@
                 <div class="star-rating-front" style="width: <%= @customer.comment_score_percentage %>%">★★★★★</div>
                 <div class="star-rating-back">★★★★★</div>
               </div>
-              <div class="average-score-display ml-3 pt-2">
+              <div class="average-score-display ml-3 pt-2 pt-3">
                 <%= @customer.avg_score %>点（<%= @customer.comments.count %>件）
               </div>
             </div>

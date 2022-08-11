@@ -1,6 +1,9 @@
 class Customer < ApplicationRecord
-    has_many :comments, dependent: :destroy
+  extend ActiveHash::Associations::ActiveRecordExtensions
+    belongs_to :type
+    validates :type_id, numericality: { other_than: 1 , message: "can't be blank"}
     
+    has_many :comments, dependent: :destroy
     validates :family_name,
     presence: true, length: { maximum: 20 }
     validates :given_name,

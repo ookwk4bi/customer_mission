@@ -25,7 +25,7 @@ gem 'kaminari'
 gem 'ransack'
 gem 'devise'
 gem 'roo'
-
+gem 'active_hash'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

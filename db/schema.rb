@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2022_08_10_142427) do
     t.string "given_name", null: false
     t.text "detail", null: false
     t.string "account_number", null: false
+    t.integer "type_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
