@@ -10,9 +10,10 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^4.9.3"
+    "@webpack-cli/serve": "^1.7.0",
+    "webpack-dev-server": "^4.10.0"
   },
-  "engines" : {
+  "engines": {
     "node": "14.19.3"
   }
 }
