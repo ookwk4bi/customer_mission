@@ -30,8 +30,6 @@ ActiveRecord::Schema.define(version: 2022_08_10_142427) do
     t.string "account_number", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "type_id", null: false
-    t.index ["type_id"], name: "index_customers_on_type_id"
   end
 
   create_table "documents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -65,5 +63,4 @@ ActiveRecord::Schema.define(version: 2022_08_10_142427) do
 
   add_foreign_key "comments", "customers"
   add_foreign_key "comments", "users"
-  add_foreign_key "customers", "types"
 end
