@@ -79,7 +79,6 @@ end
       :given_name, 
       :detail, 
       :account_number
-      
       )
   end  
 
