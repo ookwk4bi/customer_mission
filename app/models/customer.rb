@@ -7,7 +7,7 @@ class Customer < ApplicationRecord
     presence: true, length: { maximum: 20 }
     validates :detail, presence: true
     validates :account_number, presence: true
-    validates :type_id, presence: true
+
   
     def avg_score
       unless self.comments.empty?
