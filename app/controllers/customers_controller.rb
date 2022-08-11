@@ -3,7 +3,7 @@ class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
   
   def index
-    
+    @customers = Customer.includes(:user).order('created_at DESC')
     # @customers = Customer.page(params[:page])
     if params[:q]&.dig(:family_name)
       squished_keywords = params[:q][:family_name].squish
@@ -51,7 +51,7 @@ end
   end
 
   def show
-    @customer = Customer.find(params[:id])
+    
     @comment = Comment.new
     # @comments = Comment.where(customer_id: params[:id].to_i)
     @comments = @customer.comments
