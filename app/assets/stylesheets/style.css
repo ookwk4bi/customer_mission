@@ -7,9 +7,25 @@
 
 .btn-distance{
     margin-left:10px;
-    width:132px
+    width:132px;
+   
+    
 }
 
+
+.label2 {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #337ab7;;
+    cursor: pointer;
+    margin-left: 10px;
+    height: 41px;
+    
+}
+
+input[type="file"] {
+    display: none;
+}
 
 .btn-a{
     margin-left:10px;
@@ -58,3 +74,8 @@
     display: flex;
     justify-content: center;
 }
+
+.evaluation{
+    font-weight: 600;
+}
+

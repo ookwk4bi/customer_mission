@@ -1,8 +1,12 @@
 <%= form_tag import_documents_path, multipart: true do %>
-    <%= file_field_tag :file, class: "btn btn-default pull-right btn-distance" %>
-    <%= submit_tag "インポート", class: "btn btn-default pull-right btn-css" %> 
-    <%= link_to '戻る', customers_path, class: "btn btn-default pull-right btn-a" %>
-    <%= link_to "全て削除", destroy_all_documents_path , method: :delete, class: "btn btn-default pull-right btn-b"%>
+  
+   <label class="btn btn-primary pull-right label2">
+  <input type="file" name="file">ファイルを選択
+  </label>
+    <%= submit_tag "インポート", class: "btn btn-primary pull-right btn-css" %> 
+    <%= link_to '戻る', customers_path, class: "btn btn-primary pull-right btn-a" %>
+    <%= link_to "全て削除", destroy_all_documents_path , method: :delete, class: "btn btn-primary pull-right btn-b"%>
+    
   <% end %>
   
   
@@ -20,7 +24,7 @@
       </thead>
       <tbody>
         <% @documents.each do |document| %>
-          <tr>
+          <tr id="copyTarget">
             <td><%= document.last_name.truncate(5) %></td>
             <td><%= document.personal_name.truncate(5) %></td>
             <td><%= document.content.truncate(50) %></td>
