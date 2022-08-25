@@ -8,9 +8,12 @@
     <%= link_to "全て削除", destroy_all_documents_path , method: :delete, class: "btn btn-primary pull-right btn-b"%>
     
   <% end %>
+
+  
   
   
   <h1 class="font-size">CSV情報一覧</h1>
+  <p class="font-min">CSVファイルを選択し、インポートしてください</p>
   <br>
   <br>
   <table class="table table-striped">
@@ -23,12 +26,13 @@
       </thead>
       <tbody>
         <% @documents.each do |document| %>
+          <div id="copy">
           <tr id="copyTarget">
             <td><%= document.last_name.truncate(5) %></td>
             <td><%= document.personal_name.truncate(5) %></td>
             <td><%= document.number.truncate(9) %></td>
-            
           </tr>
+          </div>
         <% end %>
         
       </tbody>
