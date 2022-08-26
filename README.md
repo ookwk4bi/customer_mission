@@ -197,7 +197,7 @@ _パスワード: ookwk4bi
 
 
 ### Association
-
+- has_many :customers
 - has_many :comments<br>
 <br>
 
@@ -211,11 +211,13 @@ _パスワード: ookwk4bi
 | given_name         | string |    null: false 
 | account_number     | string |  null: false 
 | type       | references | null: false, foreign_key: true 
+| user       | references | null: false, foreign_key: true 
 
 
 
 ### Association
 - belongs_to :type
+- belongs_to :user
 - has_many :comments<br>
 <br>
 
@@ -287,9 +289,11 @@ Ruby/Ruby on Rails/JavaScript/MySQL/Github/AWS/Visual Studio Code<br>
 
 *  JavaScriptを活用し、星５段階評価機能を実装。
 
-*  単体検索だけでなく、大量データーを一括検索ができるようにしたこと。（複数条件で）
+*  単体検索だけでなく、大量のデーターを一括検索ができるようにした。（複数条件で）
 
-*  CSVインポート機能を実装し、外部からの情報を取り込めるようにしたこと。
+*  CSVインポート機能を実装し、CSVファイルにて外部からの情報を取り込めるようにした。
+
+*  本番環境でのエラーが多かったため、チェックの工程を短くし、エラーをすぐ発見できるように工夫した。
 
 
 
