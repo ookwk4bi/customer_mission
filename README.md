@@ -78,8 +78,9 @@ _パスワード: ookwk4bi
 <br>
   
 
-## トップページ<br>
+## トップページ
 １ページに100件の顧客情報が表示が可能。
+
 <br>
 
 [![Image from Gyazo](https://i.gyazo.com/5be05dcde4e510126bec07878479ff34.gif)](https://gyazo.com/de9c1cdd78445b3382626d55c4bbfa04)
@@ -88,6 +89,7 @@ _パスワード: ookwk4bi
 
 ## CSVデーターをインポート
 今回利用される顧客情報のCSVデーターをアップロードし、データベースとページに情報を反映することができる。
+
 <br>
 
 [![Image from Gyazo](https://i.gyazo.com/a37386f2d0afefdf4d0476c7b4c260b4.gif)](https://gyazo.com/a37386f2d0afefdf4d0476c7b4c260b4)
@@ -281,4 +283,14 @@ Ruby/Ruby on Rails/JavaScript/MySQL/Github/AWS/Visual Studio Code<br>
 <br>
 
 # 工夫したポイント
-*  Gemを多く活用。
+*  Gemを多く活用し、Gemについて詳しく調べた。
+
+*  JavaScriptを活用し、星５段階評価機能を実装。
+
+*  単体検索だけでなく、大量データーを一括検索ができるようにしたこと。（複数条件で）
+
+*  CSVインポート機能を実装し、外部からの情報を取り込めるようにしたこと。
+
+
+
+

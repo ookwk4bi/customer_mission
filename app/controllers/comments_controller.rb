@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
+  
 
     def create
       @comment = Comment.new(comment_params)
@@ -22,4 +24,6 @@ class CommentsController < ApplicationController
     def comment_params
       params.require(:comment).permit(:body, :score, :customer_id, :user_id)
     end
+
+   
   end

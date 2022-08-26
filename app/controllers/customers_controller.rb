@@ -1,10 +1,12 @@
 class CustomersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
+  before_action :redirect_root, only: [:edit,:show,:destroy]
   
   def index
     @customers = Customer.includes(:user).order('created_at DESC')
     # @customers = Customer.page(params[:page])
+    @customer = Customer.includes(:user).order('created_at DESC')
     if params[:q]&.dig(:family_name)
       squished_keywords = params[:q][:family_name].squish
       params[:q][:family_name_cont_any] = squished_keywords.split(" ")
@@ -80,11 +82,18 @@ end
       :given_name, 
       :detail, 
       :account_number,
-      :type_id
-      )
+      :type_id,
+      ).merge(user_id: current_user.id)
   end  
 
   def set_customer
     @customer = Customer.find(params[:id])
+  end
+
+  def redirect_root
+    if @customer.user_id != current_user.id 
+      redirect_to root_path
+    end
+    
   end
 end

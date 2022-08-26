@@ -14,6 +14,7 @@
       given_name: Faker::Japanese::Name.first_name,
       detail: "クレーマー対応注意！！",
       account_number: '12345678',
-      type_id: rand(2) + 1
+      type_id: rand(3) + 1,
+      user_id: rand(2) + 1,
     )
   end

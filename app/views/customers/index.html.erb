@@ -61,8 +61,11 @@
         <th>編集</th>
       </thead>
       <tbody>
+     
         <% @customers.each do |customer| %>
+          
           <tr>
+          <% if customer.user == current_user %>
             <td><%= customer.family_name.truncate(5) %></td>
             <td><%= customer.given_name.truncate(5) %></td>
             <td><%= customer.detail.truncate(45) %></td>
@@ -70,8 +73,10 @@
             <td><%= customer.type.name %></td>
             <td class="center"><%= customer.comments.count %></td>
             <td><%= link_to '詳細', customer, class: "btn btn-default btn-xs" %></td>
+            <% end %>
+            <% end %>
           </tr>
-        <% end %>
+        
       </tbody>
     </table>
     <div class="a">

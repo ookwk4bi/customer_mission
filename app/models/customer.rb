@@ -3,6 +3,7 @@ class Customer < ApplicationRecord
     belongs_to :type
     validates :type_id, numericality: { other_than: 1 , message: "can't be blank"}
     
+    belongs_to :user,optional: true
     has_many :comments, dependent: :destroy
     validates :family_name,
     presence: true, length: { maximum: 20 }
