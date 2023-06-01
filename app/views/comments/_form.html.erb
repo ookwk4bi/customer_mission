@@ -1,4 +1,4 @@
-<h2 class="font-size"><コメント></h2>
+<h2 class="font-size form_group catch">　コメント　</h2>
 <div class="rating-box mt-3">
   <%= form_with model: comment, url: customer_comments_path(customer), local: true do |f| %>
     <div class="main-rating">
@@ -11,19 +11,14 @@
       </div>
       <div class="ml-3 rating-value-display far"><span id="rating-value-display", class="font-size">0</span><span class="font-size">/5</span></div>
     </div>
+    <div class="form_group">
     <%= f.hidden_field :customer_id, value: customer.id %>
     <%= f.hidden_field :score, id: "rating-value" %>
     <%= f.text_field :body, class: "form-control" %>
     <br>
-    <%= f.submit "保存", class: "btn btn-default" %>
-    <!-- 編集(edit)のviewへのリンク -->
-    <%= link_to '編集',edit_customer_path(@customer), class: "btn btn-default" %>
-    
-    <%= link_to '削除', customer_path(@customer), method: :delete, class: "btn btn-default" %>
-    
-    <!-- 戻る(index)のviewへのリンク -->
-    <%= link_to '戻る',customers_path, class: "btn btn-default" %>
-    
+    <%= f.submit "コメント", class: "btn width1" %>
+    <br>
+    </div>
   <% end %>
 </div>
 

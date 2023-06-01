@@ -1,17 +1,12 @@
 <%= form_tag import_documents_path, multipart: true do %>
-  
-   <label class="btn btn-primary pull-right label2">
-  <input type="file" name="file">ファイルを選択
+  <label class="btn btn-primary pull-right label2 height">
+  <input type="file" name="file" accept="text/csv" >ファイルを選択
   </label>
-    <%= submit_tag "インポート", class: "btn btn-primary pull-right btn-css" %> 
-    <%= link_to '戻る', customers_path, class: "btn btn-primary pull-right btn-a" %>
-    <%= link_to "全て削除", destroy_all_documents_path , method: :delete, class: "btn btn-primary pull-right btn-b"%>
-    
+    <%= submit_tag "インポート", class: "btn btn-primary pull-right btn-css height no-style", style: "border-radius: 0;"%> 
+    <%= link_to "全て削除", destroy_all_documents_path , method: :delete, class: "btn btn-primary pull-right btn-b height"%>
+    <%= link_to "コピー", copy_documents_path , class: "btn btn-primary pull-right btn-b height"%>
   <% end %>
 
-  
-  
-  
   <h1 class="font-size">CSV情報一覧</h1>
   <p class="font-min">CSVファイルを選択・インポートしてください</p>
   <br>

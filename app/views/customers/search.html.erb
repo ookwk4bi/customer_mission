@@ -9,8 +9,9 @@
     <div class="col-lg-6 col-lg5">
       <%= link_to '顧客登録', new_customer_path, class: "btn btn-primary pull-right btn-c btn-a" %>
       <%= link_to 'CSVデーター', documents_path, class: "btn btn-primary pull-right btn-a" %>
+    </div>
   </div>
-
+<p class="form_group keyword"><%= @key %></p>
 <!-- 追加 START -->
   <%= search_form_for @q, url: search_customers_path, method: :post do |f| %>
     <div class="row">
@@ -60,11 +61,11 @@
       <th>会員番号</th>
       <th>タイプ</th>
       <th>コメント</th>
-      <th>詳細</th>
+      <th>編集</th>
     </thead>
     <tbody>
 
-      <% @customers.each do |customer| %>
+      <% @customer.each do |customer| %>
         
         <tr>
         <% if customer.user == current_user %>
@@ -82,7 +83,7 @@
     </tbody>
   </table>
   <div class="a">
-  <%= paginate @customers %>
+  <%= paginate @customer %>
 </div>
 </div>
 </div>

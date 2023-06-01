@@ -12,6 +12,19 @@ class Customer < ApplicationRecord
     validates :detail, presence: true
     validates :account_number, presence: true
     
+    # CSVエクスポート出力
+  def self.csv_attributes
+    ["family_name", "given_name","detail","account_number"]
+  end
+
+  # def self.generate_csv
+  #   CSV.generate(headers: true) do |csv|
+  #     csv << csv_attributes
+  #     all.each do |part|
+  #       csv << csv_attributes.map{|attr| part.send(attr)}
+  #     end
+  #   end
+  # end
   
     def avg_score
       unless self.comments.empty?
@@ -28,4 +41,4 @@ class Customer < ApplicationRecord
         0.0
       end
     end
-    end
+  end
