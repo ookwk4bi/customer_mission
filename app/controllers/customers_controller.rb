@@ -61,40 +61,40 @@ end
     end
     @q = Customer.ransack(params[:q])
     @customer = @q.result.page(params[:page])
-      csv_data = CSV.generate(headers: true) do |csv|
-        header = %w(苗字 名前 詳細 会員番号)
-        csv << header
-        @customer.each do |customer|
-          values = [customer.family_name,customer.given_name ,customer.detail, customer.account_number]
-          puts values
-          csv << values
-          puts "a"
-          puts csv
-        end
-      end
-      if RUBY_PLATFORM =~ /mswin|mingw|cygwin/
-        # Windowsの場合
-        desktop_path = File.join(File.expand_path('~'), 'Desktop')
-      else
-        # Macの場合
-        desktop_path = File.join(File.expand_path('~/Desktop'))
-      end
-      filename = "カスタマー情報_#{Time.current.strftime('%Y%m%d%S')}.csv" # 保存するファイル名を指定する
-      filepath = File.join(desktop_path, filename) # パスとファイル名を結合する
+      # csv_data = CSV.generate(headers: true) do |csv|
+      #   header = %w(苗字 名前 詳細 会員番号)
+      #   csv << header
+      #   @customer.each do |customer|
+      #     values = [customer.family_name,customer.given_name ,customer.detail, customer.account_number]
+      #     puts values
+      #     csv << values
+      #     puts "a"
+      #     puts csv
+      #   end
+      # end
+      # if RUBY_PLATFORM =~ /mswin|mingw|cygwin/
+      #   # Windowsの場合
+      #   desktop_path = File.join(File.expand_path('~'), 'Desktop')
+      # else
+      #   # Macの場合
+      #   desktop_path = File.join(File.expand_path('~/Desktop'))
+      # end
+      # filename = "カスタマー情報_#{Time.current.strftime('%Y%m%d%S')}.csv" # 保存するファイル名を指定する
+      # filepath = File.join(desktop_path, filename) # パスとファイル名を結合する
 
-      File.open(filepath, "w") do |file|
-        file.write(csv_data)
-      end
-      puts '終了'
-      fp = open(filepath,'r')
-      line_count = fp.read.count("\n")
-      puts line_count
-      if line_count > 2
-        @key = flash[:@key] = "⚠️デスクトップに保存されました。"
-      end
-      if line_count <= 2
-        File.delete(filepath)
-      end
+      # File.open(filepath, "w") do |file|
+      #   file.write(csv_data)
+      # end
+      # puts '終了'
+      # fp = open(filepath,'r')
+      # line_count = fp.read.count("\n")
+      # puts line_count
+      # if line_count > 2
+      #   @key = flash[:@key] = "⚠️デスクトップに保存されました。"
+      # end
+      # if line_count <= 2
+      #   File.delete(filepath)
+      # end
   end
 
 
