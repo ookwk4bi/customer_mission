@@ -1,11 +1,10 @@
 <div class="row">
   <div class="col-lg-12">
-    <h1 class="font-size">顧客情報の編集</h1>
+    <h1 class="font-size form_group catch">顧客情報の編集</h1>
+    <br>
     <br>
     <%= render 'layouts/form' %>
     
-    <%= link_to '削除', customer_path(@customer), method: :delete, style: "margin-top:10px", class: "btn btn-default" %>
-    <%= link_to '戻る', customer_path(@customer),  style: "margin-top:10px;", class: "btn btn-default" %>
   </div>
 </div>
 

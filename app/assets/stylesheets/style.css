@@ -32,6 +32,7 @@ input[type="file"] {
     width:100px;
     height: 41px;
     padding-top: 10px;
+    margin-bottom:10px;
 }
 
 .btn-b{
@@ -84,3 +85,107 @@ input[type="file"] {
     font-weight: 600;
 }
 
+.keyword{
+    font-weight: 600;
+    color: red;
+}
+
+.navbar{
+    height: 80px;
+}
+
+.navbar-center{
+   margin-top: 18px;
+   font-size: 18px;
+}
+
+.navbar-center1{
+    margin-top: 18px;
+    font-size: 25px;
+ }
+
+.height{
+    margin-top: 30px;
+}
+
+
+.container1 {
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  }
+
+.form-control1{
+width: 500px;
+border: #000 1px solid;
+display: flex;
+margin-bottom: 20px;
+margin-left: 20px;
+
+}
+
+.form_group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .width{
+    width: 530px;
+    margin-left: 60px;
+    
+    }
+
+.width1{
+    width: 300px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+form input[type="submit"] {
+    background-color: #123456;
+    border-radius: 20px;
+    color: #fff;
+    border: 0;
+    font-size: 15px;
+    }
+form input[type="submit"].no-style {
+    border: none;
+    }
+form input[type="submit"]:hover {
+    background-color: #84d3ef;
+    }
+form input {
+    width: 100%;
+    margin: 5px 0 15px;
+    padding: 10px;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    font-family: "游ゴシック", "YuGothic";
+    }
+
+form label {
+  margin-top: 10px;
+    }
+
+.show-width{
+  width: 80px;
+	margin-left: 10px;
+}
+
+catch {
+    display: flex;
+    align-items: center; /* 垂直中心 */
+    justify-content: center; /* 水平中心 */
+  }
+  .catch:before, .catch:after {
+    border-top: 1px solid;
+    content: "";
+    width: 18em; /* 線の長さ */
+  }
+  .catch:before {
+    margin-right: 1em; /* 文字の右隣 */
+  }
+  .catch:after {
+    margin-left: 1em; /* 文字の左隣 */
+  }

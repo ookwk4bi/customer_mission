@@ -1,69 +1,73 @@
 <div class="row">
   <div class="col-lg-12">
-    <h1 class="font-size"><顧客詳細ページ></h1><br>
+    <h1 class="font-size form_group catch">顧客詳細ページ</h1><br>
+    <br>
     <dl>
-    <div class="form-group">
-      <dt>お名前</dt>
-      <dd style="margin:0px 0px 10px 20px"><%= @customer.family_name %> <%= @customer.given_name %></dd>
+      <div class="form-group container1">
+        <dt>お名前</dt>
+        <dd style="margin:0px 0px 10px 20px"><%= @customer.family_name %> <%= @customer.given_name %></dd>
       </div>
-      <div class="form-group">
-      <dt>詳細</dt>
-      <dd style="margin:0px 0px 10px 20px"><%= @customer.detail %></dd>
+      <div class="form-group container1">
+        <dt>詳細</dt>
+        <dd style="margin:0px 0px 10px 20px"><%= @customer.detail %></dd>
       </div>
-      <div class="form-group">
-      <dt>会員番号</dt>
-      <dd style="margin:0px 0px 10px 20px"><%= @customer.account_number %></dd>
+      <div class="form-group container1">
+        <dt>会員番号</dt>
+        <dd style="margin:0px 0px 10px 20px"><%= @customer.account_number %></dd>
       </div>
-      <div>
-      <dt>タイプ</dt>
-      <dd style="margin:0px 0px 10px 20px"><%= @customer.type.name %></dd>
+      <div class="form-group container1">
+        <dt>タイプ</dt>
+        <dd style="margin:0px 0px 10px 20px"><%= @customer.type.name %></dd>
       </div>
-      </dl>
-    
-<br>
-    <h2 class="font-size"><対応注意度></h2>
-            <div class="content average-score bottom">
-              <div class="star-rating mb-2">
-              
-                <div class="star-rating-front" style="width: <%= @customer.comment_score_percentage %>%">★★★★★</div>
-                <div class="star-rating-back">★★★★★</div>
-              </div>
-              <div class="average-score-display ml-3 pt-2 pt-3">
-                <%= @customer.avg_score %>点（<%= @customer.comments.count %>件）
-              </div>
+    </dl>
+    <div class="form-group container1">
+      <!-- 編集(edit)のviewへのリンク -->
+      <%= link_to '編集',edit_customer_path(@customer), class: "btn btn-default show-width" %>
+      <%= link_to '削除', customer_path(@customer), method: :delete, class: "btn btn-default show-width", data: { confirm: "本当に削除しますか？" } %>
+    </div>
+    <br>
+    <h2 class="font-size form_group catch">　対応注意　</h2>
+    <br>
+          <div class="content average-score bottom container1">
+            <div class="star-rating mb-2">
+            
+              <div class="star-rating-front" style="width: <%= @customer.comment_score_percentage %>%">★★★★★</div>
+              <div class="star-rating-back">★★★★★</div>
+            </div>
+            <div class="average-score-display ml-3 pt-2 pt-3">
+              <%= @customer.avg_score %>点（<%= @customer.comments.count %>件）
             </div>
           </div>
         </div>
+      </div>
     <br>
     <div class="row">
-  <div class="col-lg-12">
-  <div class="row">
-  <div class="col-lg-12">
-    <h2 class="font-size"><対応履歴></h2><br>
-    <table class="table is-fullwidth has-text-centered">
-          <thead>
-            <tr>
-              <th>ユーザー</th><th>注意度</th><th>内容</th><th>削除</th><th>投稿日時</th>
-            </tr>
-          </thead>
-          <tbody>
-          <% @comments.each do |comment| %>
+    <div class="col-lg-12">
+    <div class="row">
+    <div class="col-lg-12">
+      <h2 class="font-size form_group catch">　対応履歴　</h2><br>
+      <table class="table is-fullwidth has-text-centered">
+            <thead>
               <tr>
-                <td><%= comment.user.full_name %></td>
-                <td><%= comment.score %></td>
-                <td><%= comment.body %></td>
-                
-                <td> <%= link_to '削除', comment_path(comment), method: :delete, class: "btn btn-default btn-xs" %></td>
-                
-                <td><%= comment.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+                <th>ユーザー</th><th>注意度</th><th>内容</th><th>削除</th><th>投稿日時</th>
               </tr>
-            <% end %>
-          </tbody>
-        </table>
-    
-
-<hr />
-<%= render 'comments/form', comment: @comment, customer: @customer %><br>
+            </thead>
+            <tbody>
+            <% @comments.each do |comment| %>
+                <tr>
+                  <td><%= comment.user.full_name %></td>
+                  <td><%= comment.score %></td>
+                  <td><%= comment.body %></td>
+                  
+                  <td> <%= link_to '削除', comment_path(comment), method: :delete, class: "btn btn-default btn-xs" %></td>
+                  
+                  <td><%= comment.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+      <hr />
+      <%= render 'comments/form', comment: @comment, customer: @customer %><br>
 
   </div>
 </div>
