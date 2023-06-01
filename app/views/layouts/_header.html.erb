@@ -7,11 +7,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/customers">カスタマー情報</a>
+      <a class="navbar-brand navbar-center1" href="/customers">カスタマー情報</a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse-menu">
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right navbar-center">
       <% if user_signed_in? %>
+        <li><%= link_to "トップページ", root_path %></li>
         <li><%= link_to "設定変更", edit_user_registration_path %></li>
         <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
       <% else %>
