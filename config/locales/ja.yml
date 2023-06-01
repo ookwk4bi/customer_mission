@@ -1,0 +1,43 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      customer: 顧客情報
+      document: 顧客情報
+      comment: コメント
+    attributes:
+      user:
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード（確認用)
+      customer:
+        family_name: 苗字
+        given_name: 名前
+        detail: 詳細
+        account_number: 会員番号
+        type_id: カテゴリー
+      document:
+        last_name: 苗字
+        perspnal_name: 名前
+        content: 詳細
+        number: 会員番号
+      comment:
+        body: 詳細
+
+
+ja:
+  activerecord:
+    errors:
+      models:
+        customer:
+          attributes:
+            type:
+              can't be blank: "種別を入力してください"
+            family_name:
+              blank: "姓を入力してください"
+            given_name:
+              blank: "名前を入力してください"
+            detail:
+              blank: "詳細を入力してください"
+            account_number:
+              blank: "会員番号を入力してください"
