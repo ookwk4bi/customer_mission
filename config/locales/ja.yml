@@ -10,6 +10,9 @@ ja:
         email: メールアドレス
         password: パスワード
         password_confirmation: パスワード（確認用)
+        family_name: 苗字
+        given_name: 名前
+        current_password: 現在のパスワード
       customer:
         family_name: 苗字
         given_name: 名前

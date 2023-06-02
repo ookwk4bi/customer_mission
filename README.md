@@ -25,16 +25,16 @@
 <br>
   
 # URL
-Herokuによるデプロイ
-https://customer0711.herokuapp.com/
+render.comによるデプロイ
+https://customer-mission.onrender.com
 
 <br>
 
 
 # テスト用アカウント
 登録用
-_メールアドレス: ahkachu@apa.co.jp
-_パスワード: ookwk4bi
+_メールアドレス: test@gmail.com
+_パスワード: test0000
 
 <br>
 
@@ -83,7 +83,7 @@ _パスワード: ookwk4bi
 
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/5be05dcde4e510126bec07878479ff34.gif)](https://gyazo.com/de9c1cdd78445b3382626d55c4bbfa04)
+[![Image from Gyazo](https://i.gyazo.com/8d60523f9069c675121e642a98406fbe.gif)](https://gyazo.com/8d60523f9069c675121e642a98406fbe)
 
 <br>
 
@@ -92,7 +92,19 @@ _パスワード: ookwk4bi
 
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/a37386f2d0afefdf4d0476c7b4c260b4.gif)](https://gyazo.com/a37386f2d0afefdf4d0476c7b4c260b4)
+[![Image from Gyazo](https://i.gyazo.com/82418f42a74acfcf849e2ed2c018b3e8.gif)](https://gyazo.com/82418f42a74acfcf849e2ed2c018b3e8)
+
+
+<br>
+
+## csvエクスポート
+csvインポートした顧客情報をコピーし、検索ページに貼り付ける。
+複数の顧客情報の一括検索を行い、該当の顧客情報ピックアップする。その後、csvエクスポート
+を実行し、csvファイルとしてダウンロードできる。
+
+<br>
+
+[![Image from Gyazo](https://i.gyazo.com/0edfa19b5479b1740f62b2f8036635b5.gif)](https://gyazo.com/0edfa19b5479b1740f62b2f8036635b5)
 
 <br>
 
@@ -101,7 +113,8 @@ _パスワード: ookwk4bi
 
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/6ca06f65e6bc4e82e49a4b1c21dad58b.gif)](https://gyazo.com/6ca06f65e6bc4e82e49a4b1c21dad58b)
+[![Image from Gyazo](https://i.gyazo.com/80e646d4431c53e62af6341cfbe85f3e.gif)](https://gyazo.com/80e646d4431c53e62af6341cfbe85f3e)
+
 
 <br>
 
@@ -114,12 +127,12 @@ _パスワード: ookwk4bi
 
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/f4c5a8f9e97ca8e986f2a1cef30f0aee.gif)](https://gyazo.com/f4c5a8f9e97ca8e986f2a1cef30f0aee)
+[![Image from Gyazo](https://i.gyazo.com/f46e25410cca9baddb3540a9bd5b9eb4.gif)](https://gyazo.com/f46e25410cca9baddb3540a9bd5b9eb4)
 
 <br>
 
 
-## 2.カスタマー登録画面
+## 2.顧客登録画面
 必要情報入力し、ボタンをクリックすることでカテゴリーに応じた顧客情報を入力できる。
 
 登録後は、詳細ページを移動。
@@ -127,7 +140,7 @@ _パスワード: ookwk4bi
 <br>
 
 
-[![Image from Gyazo](https://i.gyazo.com/50c6b1292a16acda61efa03c35487db4.gif)](https://gyazo.com/50c6b1292a16acda61efa03c35487db4)
+[![Image from Gyazo](https://i.gyazo.com/53be8a2bb5513244d77a330ef4b83ee7.gif)](https://gyazo.com/53be8a2bb5513244d77a330ef4b83ee7)
 
 <br>
 
@@ -136,7 +149,7 @@ _パスワード: ookwk4bi
 
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/67aa37f56d5b0ebbfd495cb6161fd190.gif)](https://gyazo.com/67aa37f56d5b0ebbfd495cb6161fd190)
+[![Image from Gyazo](https://i.gyazo.com/7b43ca3ede755a5fe7c87fa534fad06d.gif)](https://gyazo.com/7b43ca3ede755a5fe7c87fa534fad06d)
 
 <br>
 
@@ -147,8 +160,7 @@ _パスワード: ookwk4bi
 
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/565858abd7f1bbeec9362035d695ed53.gif)](https://gyazo.com/565858abd7f1bbeec9362035d695ed53)
-
+[![Image from Gyazo](https://i.gyazo.com/b1d682bf2a2be6cfe295ffe7e2ea6d46.gif)](https://gyazo.com/b1d682bf2a2be6cfe295ffe7e2ea6d46)
 <br>
 
 ## 5.顧客情報削除機能
@@ -157,16 +169,16 @@ _パスワード: ookwk4bi
 
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/f33786080c80bfd3d27d84d8c50a557b.gif)](https://gyazo.com/f33786080c80bfd3d27d84d8c50a557b)
+[![Image from Gyazo](https://i.gyazo.com/c19799fb776743dc2d9d32f174c2230d.gif)](https://gyazo.com/c19799fb776743dc2d9d32f174c2230d)
 
 <br>
 
-## 6.対応履歴コメント機能
+## 6.コメント機能
 登録した顧客情報について、対応注意度の評価とコメントを残すことができる。
 
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/9d24d09c06c7c18457a344e33c7fd5e2.gif)](https://gyazo.com/9d24d09c06c7c18457a344e33c7fd5e2)
+[![Image from Gyazo](https://i.gyazo.com/b9238c8742329a01708a47a8d016898c.gif)](https://gyazo.com/b9238c8742329a01708a47a8d016898c)
 
 <br>
 
@@ -176,7 +188,7 @@ _パスワード: ookwk4bi
 
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/9d24d09c06c7c18457a344e33c7fd5e2.gif)](https://gyazo.com/9d24d09c06c7c18457a344e33c7fd5e2)
+[![Image from Gyazo](https://i.gyazo.com/6cdf88ea5d9fd79920ff5a6df6daf6c6.gif)](https://gyazo.com/6cdf88ea5d9fd79920ff5a6df6daf6c6)
 
 <br>
 
