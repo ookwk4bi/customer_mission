@@ -116,6 +116,7 @@ input[type="file"] {
     justify-content: center;
   }
 
+
 .form-control1{
 width: 500px;
 border: #000 1px solid;
@@ -142,6 +143,16 @@ margin-left: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
 }
+
+.width2{
+    width: 760px;
+}
+
+.width3{
+    width: 520px;
+    margin-left: 80px;
+}
+
 form input[type="submit"] {
     background-color: #123456;
     border-radius: 20px;
@@ -189,3 +200,23 @@ catch {
   .catch:after {
     margin-left: 1em; /* 文字の左隣 */
   }
+
+
+.flex{
+    display: flex;
+}
+
+.beside{
+    width: 250px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.beside-btn{
+    width: 100px;
+    margin-left: 10px;
+    height: 40px;
+    padding-bottom: px;
+    justify-content: center;
+}

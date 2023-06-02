@@ -12,20 +12,13 @@ class Customer < ApplicationRecord
     validates :detail, presence: true
     validates :account_number, presence: true
     
-    # CSVエクスポート出力
-  def self.csv_attributes
-    ["family_name", "given_name","detail","account_number"]
-  end
-
-  # def self.generate_csv
-  #   CSV.generate(headers: true) do |csv|
-  #     csv << csv_attributes
-  #     all.each do |part|
-  #       csv << csv_attributes.map{|attr| part.send(attr)}
-  #     end
-  #   end
-  # end
-  
+    def self.search(search)
+      if search != ""
+        Customer.where(['family_name LIKE(?) OR given_name LIKE(?) OR detail LIKE(?) OR account_number LIKE(?)', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%"])
+      else
+        Customer.all
+      end
+    end
     def avg_score
       unless self.comments.empty?
         comments.average(:score).round(1).to_f

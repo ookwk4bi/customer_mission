@@ -5,9 +5,12 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+    collection do
+      get 'csv_export'
+    end
   end
   root 'customers#index'
-  post '/customers/search', to: 'customers#search'
+  post '/customers/csv_export', to: 'customers#csv_export'
   resources :comments, only: [:create, :destroy, :show]
   resources :documents do
     collection { post :import }
