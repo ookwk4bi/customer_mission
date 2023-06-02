@@ -4,29 +4,31 @@
   
   
 # アプリケーション名
-カスタマー情報  
+カスタマー顧客管理システム  
 
 <br>
   
 
 # アプリケーション概要
-①常連様とクレーマーなどの特別対応が必要なお客様を登録。<br>
-②CSVインポート機能で当日利用顧客情報をアプリにインポート。<br>
-③CSV情報を一括検索機能にて、当日利用予定の顧客の中に常連様やクレーマーがいないかピックアップする。<br>
+①カテゴリー種別で顧客情報を登録。<br>
+②CSVインポート機能を使い、利用するお客様の情報をアプリにCSVインポートする。<br>
+③CSVインポートした顧客情報を一括検索機能とcsvエクスポート機能を使い、当日利用される顧客から常連様やクレーマーがいないか事前にピックアップする。<br>
 <br>
 <概要><br>
-1日に100名規模の対応が必要な現場で事前に特別対応のお客様を認知することが難しく、<br>
-クレームや問題に発展しているケースが多い。<br>
-上記のことからアプリで事前にピックアップし、特別対応の必要なお客様を事前に認知し、<br>
-正しい対応をすることで顧客満足度の向上に貢献できると考えました。<br>
+1日あたり100人規模の対応が必要な現場では、事前に特別な対応が必要なお客様を認知することが困難であり、クレームや問題に発展するケースが多発しています。<br>このような状況から、アプリケーションを利用して事前に特別対応が必要なお客様をピックアップし、適切な対応を行うことで、顧客満足度向上に貢献できると考えました。<br>
 
 
 
 <br>
-  
-# URL
-render.comによるデプロイ
+
+# URL 
+
+#### render.comによるデプロイ
 https://customer-mission.onrender.com
+
+#### Basic認証
+- ID: ookwk4bi
+- Pass: 8909
 
 <br>
 
@@ -83,7 +85,7 @@ _パスワード: test0000
 
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/8d60523f9069c675121e642a98406fbe.gif)](https://gyazo.com/8d60523f9069c675121e642a98406fbe)
+[![Image from Gyazo](https://i.gyazo.com/f4348cd9c6912dc32092fb203156c1f3.gif)](https://gyazo.com/f4348cd9c6912dc32092fb203156c1f3)å
 
 <br>
 
@@ -278,11 +280,11 @@ csvインポートした顧客情報をコピーし、検索ページに貼り�
 <br>
 
 # 開発環境
-Ruby/Ruby on Rails/JavaScript/MySQL/Github/AWS/Visual Studio Code<br>
+Ruby/Ruby on Rails/JavaScript/MySQL/Github/render.com/Visual Studio Code<br>
 <br>
 
 # ローカルでの動作方法  
-% git clone https://git.heroku.com/customer0711.git
+% git clone git@github.com:ookwk4bi/customer_mission.git
 
 % cd customer_mission
 
