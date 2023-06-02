@@ -23,21 +23,5 @@ ja:
         number: 会員番号
       comment:
         body: 詳細
-
-
-ja:
-  activerecord:
-    errors:
-      models:
-        customer:
-          attributes:
-            type:
-              can't be blank: "種別を入力してください"
-            family_name:
-              blank: "姓を入力してください"
-            given_name:
-              blank: "名前を入力してください"
-            detail:
-              blank: "詳細を入力してください"
-            account_number:
-              blank: "会員番号を入力してください"
+      type:
+        name: カテゴリー

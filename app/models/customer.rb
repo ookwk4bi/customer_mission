@@ -1,7 +1,7 @@
 class Customer < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to :type
-    validates :type_id, numericality: { other_than: 1 , message: "can't be blank"}
+    validates :type_id, numericality: { other_than: 1}
     
     belongs_to :user
     has_many :comments, dependent: :destroy

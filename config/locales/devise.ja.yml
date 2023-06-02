@@ -8,6 +8,7 @@ ja:
 #      already_confirmed: "was already confirmed"
       not_locked: "は凍結されていません"
 #      not_locked: "was not locked"
+
   errors:
     messages:
       not_saved: "⚠︎再入力してください"
