@@ -9,7 +9,7 @@
       </button>
       <a class="navbar-brand navbar-center1" href="/customers">カスタマー情報</a>
     </div>
-    <div class="collapse navbar-collapse" id="navbar-collapse-menu">
+  <div class="collapse navbar-collapse" id="navbar-collapse-menu">
     <ul class="nav navbar-nav navbar-right navbar-center flex">
       <% if user_signed_in? %>
         <li><%= link_to "トップページ", root_path %></li>
@@ -20,12 +20,12 @@
         <li><%= link_to "ログイン", new_user_session_path %></li>
       <% end %>
       <div class="flex">
-      <li>
-        <%= form_with(url: search_customers_path, local: true, method: :get, class: "search-form flex") do |form| %>
-          <%= form.text_field :keyword, placeholder: "姓・名前・詳細・会員番号", class: "search-input beside" %>
-          <%= form.submit "検索", class: "search-btn beside-btn" %>
-        <% end %>
-      </li>
+        <li>
+          <%= form_with(url: search_customers_path, local: true, method: :get, class: "search-form flex") do |form| %>
+            <%= form.text_field :keyword, placeholder: "姓・名前・詳細・会員番号", class: "search-input beside" %>
+            <%= form.submit "検索", class: "search-btn beside-btn" %>
+          <% end %>
+        </li>
       </div>
     </ul>
   </div><!-- /.navbar-collapse -->

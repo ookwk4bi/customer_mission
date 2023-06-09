@@ -1,37 +1,34 @@
 <%= form_tag import_documents_path, multipart: true do %>
   <label class="btn btn-primary pull-right label2 height">
-  <input type="file" name="file" accept="text/csv" >ファイルを選択
+    <input type="file" name="file" accept="text/csv" >ファイルを選択
   </label>
-    <%= submit_tag "インポート", class: "btn btn-primary pull-right btn-css height no-style", style: "border-radius: 0;"%> 
-    <%= link_to "全て削除", destroy_all_documents_path , method: :delete, class: "btn btn-primary pull-right btn-b height"%>
-    <%= link_to "コピー", copy_documents_path , class: "btn btn-primary pull-right btn-b height"%>
-  <% end %>
+  <%= submit_tag "インポート", class: "btn btn-primary pull-right btn-css height no-style", style: "border-radius: 0;"%> 
+  <%= link_to "全て削除", destroy_all_documents_path , method: :delete, class: "btn btn-primary pull-right btn-b height"%>
+  <%# <%= link_to "コピー", copy_documents_path , class: "btn btn-primary pull-right btn-b height"%> %>
+<% end %>
 
-  <h1 class="font-size">CSV情報一覧</h1>
-  <p class="font-min">CSVファイルを選択・インポートしてください</p>
-  <br>
-  <br>
-  <table class="table table-striped">
-  
-      <thead>
-        <th>姓</th>
-        <th>名</th>
-        <th>会員番号</th>
-        
-      </thead>
-      <tbody>
-        <% @documents.each do |document| %>
-          <div id="copy">
-          <tr id="copyTarget">
-            <td><%= document.last_name.truncate(5) %></td>
-            <td><%= document.personal_name.truncate(5) %></td>
-            <td><%= document.number.truncate(9) %></td>
-          </tr>
-          </div>
-        <% end %>
-        
-      </tbody>
-    </table>
-    <div class="a">
-      <%= paginate @documents %>
-    </div>
+<h1 class="font-size">CSV情報一覧</h1>
+<p class="font-min">CSVファイルを選択・インポートしてください</p>
+<br>
+<br>
+<table class="table table-striped">
+  <thead>
+    <th>姓</th>
+    <th>名</th>
+    <th>会員番号</th>
+  </thead>
+  <tbody>
+    <% @documents.each do |document| %>
+      <div id="copy">
+        <tr id="copyTarget">
+          <td><%= document.last_name.truncate(5) %></td>
+          <td><%= document.personal_name.truncate(5) %></td>
+          <td><%= document.number.truncate(9) %></td>
+        </tr>
+      </div>
+    <% end %>
+  </tbody>
+</table>
+<div class="a">
+  <%= paginate @documents %>
+</div>

@@ -12,14 +12,13 @@
       <div class="ml-3 rating-value-display far"><span id="rating-value-display", class="font-size">0</span><span class="font-size">/5</span></div>
     </div>
     <div class="form_group">
-    <%= f.hidden_field :customer_id, value: customer.id %>
-    <%= f.hidden_field :score, id: "rating-value" %>
-    <%= f.text_field :body, class: "form-control" %>
-    <br>
-    <%= f.submit "コメント", class: "btn width1" %>
-    <br>
+      <%= f.hidden_field :customer_id, value: customer.id %>
+      <%= f.hidden_field :score, id: "rating-value" %>
+      <%= f.text_field :body, class: "form-control" %>
+      <br>
+      <%= f.submit "コメント", class: "btn width1" %>
+      <br>
     </div>
   <% end %>
 </div>
-
 <%= javascript_pack_tag 'reviews' %>

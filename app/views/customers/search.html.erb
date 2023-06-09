@@ -42,9 +42,9 @@
           </div>
           <div class="row">
             <div class="col-xs-12 text-center ">
-            <%= f.button class: 'btn btn-default', name: 'search' do %>
-              <i class="fa fa-file-text"></i> CSVデーター出力
-            <% end %>
+              <%= f.button class: 'btn btn-default', name: 'search' do %>
+                <i class="fa fa-file-text"></i> CSVデーター出力
+              <% end %>
               <%= link_to "リセット", root_path, class:"btn btn-default" %>
             </div>
           </div>
@@ -62,7 +62,6 @@
         <th>詳細</th>
       </thead>
       <tbody>
-
         <% @customer.each do |customer| %>
           <tr>
           <% if customer.user == current_user %>
@@ -73,10 +72,9 @@
             <td><%= customer.type.name %></td>
             <td class="center"><%= customer.comments.count %></td>
             <td><%= link_to '詳細', customer, class: "btn btn-default btn-xs" %></td>
-            <% end %>
-            <% end %>
+          <% end %>
+        <% end %>
           </tr>
-        
       </tbody>
     </table>
     <div class="a">

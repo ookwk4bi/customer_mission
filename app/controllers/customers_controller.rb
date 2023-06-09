@@ -9,7 +9,6 @@ class CustomersController < ApplicationController
     @q = Customer.ransack(params[:q])
   end
   
-
   def new
     @customer = Customer.new
   end
@@ -20,11 +19,10 @@ class CustomersController < ApplicationController
     redirect_to @customer
     else
       render :new
+    end
   end
-end
 
   def edit
-    
   end
 
   def update
@@ -79,9 +77,7 @@ end
     send_data(csv_data, filename: "顧客一覧.csv")
   end
 
-
   private
-
   def customer_params
     params.require(:customer).permit(
       :family_name,
